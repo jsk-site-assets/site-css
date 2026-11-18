@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap");
 /* Jewish Skagit County - form page styling. Applies only to pages that contain a form. */
 body:has(.form-all){background:#faf6ec!important;border-top:14px solid #14264a;box-shadow:inset 0 3px 0 #c9a24a}
 body:has(.form-all) :is(.body_wrapper,#co_body_container,#co_content_container){background:none!important;padding:0!important;overflow:visible!important}
@@ -7,20 +8,11 @@ body:has(.form-all) .form-all :is(h1,h2,h3,.form-header-group){font-family:"Corm
 body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit],input[type=submit]){background:#14264a!important;color:#c9a24a!important;border:2px solid #c9a24a!important;border-radius:999px!important;padding:12px 34px!important;font-weight:600;letter-spacing:.04em;cursor:pointer}
 body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit]):hover{background:#c9a24a!important;color:#14264a!important}
 
-/* ---- Chanukah Festival form page (form 6674847) only ---- */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap");
-body:has(form[id="6674847"]){overflow-x:hidden}
-body:has(form[id="6674847"]) :is(#id_12,#id_16){position:relative;margin:0!important;padding-left:0!important;padding-right:0!important}
-body:has(form[id="6674847"]) :is(#id_12,#id_16)::before{content:"";position:absolute;top:0;bottom:0;left:-50vw;right:-50vw;z-index:-1;background:linear-gradient(180deg,#14264a 0%,#1d2f5a 100%)}
-body:has(form[id="6674847"]) #id_12{padding-top:34px!important}
-body:has(form[id="6674847"]) #id_12 img{border-radius:18px;box-shadow:0 0 0 3px #c9a24a,0 18px 40px rgba(0,0,0,.45)}
-body:has(form[id="6674847"]) #id_16{padding:26px 0 40px!important}
-body:has(form[id="6674847"]) #text_16>div{max-width:640px!important}
-body:has(form[id="6674847"]) #text_16>div>div:nth-child(1){font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(34px,8vw,52px)!important;color:#fff!important;letter-spacing:.5px!important;margin-bottom:18px!important}
-body:has(form[id="6674847"]) #text_16>div>div:nth-child(2){background:transparent!important;border:2px solid #c9a24a;border-radius:28px!important;padding:14px 22px!important}
-body:has(form[id="6674847"]) #text_16>div>div:nth-child(3){background:rgba(255,255,255,.08)!important;color:#f3ead2!important;border:1px solid rgba(201,162,74,.45);border-radius:18px!important}
-body:has(form[id="6674847"]) #text_16>div>div:nth-child(4){font-family:"Cormorant Garamond",Georgia,serif!important;color:#e3c472!important;font-size:22px!important}
-body:has(form[id="6674847"]) #text_16>div>div:nth-child(5){background:#c9a24a!important}
-body:has(form[id="6674847"]) .form-all .form-label{color:#14264a;font-family:Jost,Arial,sans-serif;font-weight:600}
-body:has(form[id="6674847"]) .form-all :is(input[type=text],input[type=email],input[type=number],textarea,select){border:1px solid #d8cba8!important;border-radius:12px!important;background:#fff!important}
-body:has(form[id="6674847"]) #id_12::before{top:-70px}
+/* Jewish Skagit County - sitewide announcement strip */
+.mosad_sitewide_alert{background:linear-gradient(180deg,#fffdf8,#faf6ec)!important;border-top:0!important;border-bottom:1px solid #c9a24a!important;height:46px!important;box-shadow:none!important}
+.mosad_sitewide_alert .message{font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic;font-weight:600!important;font-size:21px!important;letter-spacing:.3px;color:#14264a!important}
+.mosad_sitewide_alert .message a:not(.more-link){font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic!important;font-weight:600!important;font-size:21px!important;color:#14264a!important;text-decoration:none!important}
+.mosad_sitewide_alert .message .alert-links::before{color:#c9a24a;font-size:17px!important;margin-right:10px!important}
+.mosad_sitewide_alert .message .more-link{font-family:Jost,Arial,sans-serif!important;font-style:normal;font-size:11px!important;font-weight:500!important;letter-spacing:.16em;text-transform:uppercase;color:#a8852f!important;border:1px solid #c9a24a;border-radius:999px;padding:3px 12px;margin-left:10px;vertical-align:2px;transition:background .2s,color .2s}
+.mosad_sitewide_alert .message .more-link:hover{background:#c9a24a;color:#14264a!important}
+.mosad_sitewide_alert .close{top:13px!important;opacity:.55}
