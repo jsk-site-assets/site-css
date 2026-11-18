@@ -9,10 +9,10 @@ body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit],input[
 body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit]):hover{background:#c9a24a!important;color:#14264a!important}
 
 /* Jewish Skagit County - sitewide announcement strip */
-.mosad_sitewide_alert{background:linear-gradient(180deg,#fffdf8,#faf6ec)!important;border-top:0!important;border-bottom:1px solid #c9a24a!important;height:46px!important;box-shadow:none!important}
-.mosad_sitewide_alert .message{font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic;font-weight:600!important;font-size:21px!important;letter-spacing:.3px;color:#14264a!important}
-.mosad_sitewide_alert .message a:not(.more-link){font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic!important;font-weight:600!important;font-size:21px!important;color:#14264a!important;text-decoration:none!important}
-.mosad_sitewide_alert .message .alert-links::before{color:#c9a24a;font-size:17px!important;margin-right:10px!important}
-.mosad_sitewide_alert .message .more-link{font-family:Jost,Arial,sans-serif!important;font-style:normal;font-size:11px!important;font-weight:500!important;letter-spacing:.16em;text-transform:uppercase;color:#a8852f!important;border:1px solid #c9a24a;border-radius:999px;padding:3px 12px;margin-left:10px;vertical-align:2px;transition:background .2s,color .2s}
+.mosad_sitewide_alert{background:linear-gradient(180deg,#fffdf8,#faf6ec)!important;border-top:0!important;border-bottom:1px solid #c9a24a!important;height:60px!important;box-shadow:none!important}
+.mosad_sitewide_alert .message{font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic;font-weight:600!important;font-size:27px!important;letter-spacing:.3px;color:#14264a!important}
+.mosad_sitewide_alert .message a:not(.more-link){font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic!important;font-weight:600!important;font-size:27px!important;color:#14264a!important;text-decoration:none!important}
+.mosad_sitewide_alert .message .alert-links::before{color:#c9a24a;font-size:23px!important;margin-right:12px!important}
+.mosad_sitewide_alert .message .more-link{font-family:Jost,Arial,sans-serif!important;font-style:normal;font-size:13px!important;font-weight:500!important;letter-spacing:.16em;text-transform:uppercase;color:#a8852f!important;border:1px solid #c9a24a;border-radius:999px;padding:5px 16px;margin-left:14px;vertical-align:3px;transition:background .2s,color .2s}
 .mosad_sitewide_alert .message .more-link:hover{background:#c9a24a;color:#14264a!important}
-.mosad_sitewide_alert .close{top:13px!important;opacity:.55}
+.mosad_sitewide_alert .close{top:20px!important;opacity:.55}
