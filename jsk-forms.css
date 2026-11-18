@@ -308,3 +308,13 @@ body:has(form[id="6674847"]) #text_16 .hn-pill{display:none!important}
 /* RSVP button label */
 body:has(form[id="6674847"]) #text_16 .hn-b1{font-size:0}
 body:has(form[id="6674847"]) #text_16 .hn-b1::after{content:"RSVP \2193";font-size:clamp(18px,4.4vw,22px)}
+
+/* Payment contrast, scoped to the Chanukah RSVP form only. */
+form[id="6674847"] .form-address-table tr.credit_card>td>table{background:rgba(255,255,255,.07)!important;border:1px solid rgba(241,199,90,.35)!important;border-radius:12px!important}
+form[id="6674847"] .form-address-table .credit_card .form-sub-label,form[id="6674847"] .form-address-table .billing_address .form-sub-label{color:#e8efff!important;opacity:1!important}
+form[id="6674847"] .form-address-table tr.credit_card>th,form[id="6674847"] .form-address-table tr.billing_address>th{color:#f1c75a!important;font-weight:600!important}
+form[id="6674847"] .form-address-table option{background:#172c63;color:#fff}
+form[id="6674847"] .form-address-table .form-textbox{color:#fff!important}
+form[id="6674847"] .form-address-table .form-textbox:focus{outline:2px solid #f1c75a;outline-offset:2px}
+body form[id="6674847"] #id_15 select.form-textbox#input_15_cc_exp_month,body form[id="6674847"] #id_15 select.form-textbox#input_15_cc_exp_year,body form[id="6674847"] #id_15 select#input_15_country{background:#172c63!important;color:#fff!important;appearance:auto!important;-webkit-appearance:auto!important}
+body:has(form[id="6674847"]) form[id="6674847"] #total_amount{color:#f1c75a!important}
