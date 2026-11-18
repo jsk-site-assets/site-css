@@ -289,3 +289,5 @@ body:has(form[id="6674847"]) #text_16 .hn-men>.hn-k:nth-child(20) .hn-sp:nth-of-
 body:has(form[id="6674847"]) #text_16 .hn-wrap{margin-left:-50vw;margin-top:-23px;background:linear-gradient(180deg,#040a22 0%,#07154a 38%,#0b2266 72%,rgba(11,34,102,0) 100%)}
 body:has(form[id="6674847"]) #text_16 .hn-date{font-size:clamp(26px,7.4vw,50px);white-space:nowrap}
 body:has(form[id="6674847"]) #text_16 .hn-b1{white-space:nowrap}
+/* v14: icon rows removed (hero carries the info); remove this rule to bring back */
+body:has(form[id="6674847"]) #text_16>div:not(.hn-wrap)>div:nth-child(2){display:none!important}
