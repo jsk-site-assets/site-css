@@ -1,0 +1,8 @@
+/* Jewish Skagit County - form page styling. Applies only to pages that contain a form. */
+body:has(.form-all){background:#faf6ec!important;border-top:14px solid #14264a;box-shadow:inset 0 3px 0 #c9a24a}
+body:has(.form-all) :is(.body_wrapper,#co_body_container,#co_content_container){background:none!important;padding:0!important;overflow:visible!important}
+body:has(.form-all) #co_ads_container{display:none!important}
+body:has(.form-all) .form-all{background:none!important;box-shadow:none!important;border:0!important;font-family:Jost,"Helvetica Neue",Arial,sans-serif}
+body:has(.form-all) .form-all :is(h1,h2,h3,.form-header-group){font-family:"Cormorant Garamond",Georgia,serif;color:#14264a}
+body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit],input[type=submit]){background:#14264a!important;color:#c9a24a!important;border:2px solid #c9a24a!important;border-radius:999px!important;padding:12px 34px!important;font-weight:600;letter-spacing:.04em;cursor:pointer}
+body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit]):hover{background:#c9a24a!important;color:#14264a!important}
