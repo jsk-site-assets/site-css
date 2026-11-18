@@ -304,3 +304,7 @@ body:has(form[id="6674847"]) #text_16 .hn-in>.hn-men{max-width:none;flex:none;wi
 body:has(form[id="6674847"]) #text_16 .hn-men{font-size:min(4.2px,calc(1vw - .44px))}
 
 body:has(form[id="6674847"]) #text_16 .hn-pill{display:none!important}
+
+/* RSVP button label */
+body:has(form[id="6674847"]) #text_16 .hn-b1{font-size:0}
+body:has(form[id="6674847"]) #text_16 .hn-b1::after{content:"RSVP \2193";font-size:clamp(18px,4.4vw,22px)}
