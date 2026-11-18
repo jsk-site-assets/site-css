@@ -286,3 +286,6 @@ body:has(form[id="6674847"]) #text_16 .hn-men>.hn-k:nth-child(20) .hn-in2{animat
 body:has(form[id="6674847"]) #text_16 .hn-men>.hn-k:nth-child(20) .hn-sp:nth-of-type(5){left:46.25em;top:3em;animation-delay:3.28s;animation-duration:2.6s}
 body:has(form[id="6674847"]) #text_16 .hn-men>.hn-k:nth-child(20) .hn-sp:nth-of-type(6){left:52.25em;top:3em;animation-delay:0.98s;animation-duration:3.1s}
 body:has(form[id="6674847"]) #text_16 .hn-men>.hn-k:nth-child(20) .hn-sp:nth-of-type(7){left:49em;top:3em;animation-delay:2.08s;animation-duration:3.6s}
+body:has(form[id="6674847"]) #text_16 .hn-wrap{margin-left:-50vw;margin-top:-23px;background:linear-gradient(180deg,#040a22 0%,#07154a 38%,#0b2266 72%,rgba(11,34,102,0) 100%)}
+body:has(form[id="6674847"]) #text_16 .hn-date{font-size:clamp(26px,7.4vw,50px);white-space:nowrap}
+body:has(form[id="6674847"]) #text_16 .hn-b1{white-space:nowrap}
