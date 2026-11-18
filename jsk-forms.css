@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap");
 /* Jewish Skagit County - form page styling. Applies only to pages that contain a form. */
-body:has(.form-all){background:#faf6ec!important;border-top:14px solid #14264a;box-shadow:inset 0 3px 0 #c9a24a}
+body:has(.form-all){background:#faf6ec!important}
+body:has(.form-all) .mosad_sitewide_alert{border-top:8px solid #14264a!important}
 body:has(.form-all) :is(.body_wrapper,#co_body_container,#co_content_container){background:none!important;padding:0!important;overflow:visible!important}
 body:has(.form-all) #co_ads_container{display:none!important}
 body:has(.form-all) .form-all{background:none!important;box-shadow:none!important;border:0!important;font-family:Jost,"Helvetica Neue",Arial,sans-serif}
@@ -16,3 +17,6 @@ body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit]):hover
 .mosad_sitewide_alert .message .more-link{font-family:Jost,Arial,sans-serif!important;font-style:normal;font-size:13px!important;font-weight:500!important;letter-spacing:.16em;text-transform:uppercase;color:#a8852f!important;border:1px solid #c9a24a;border-radius:999px;padding:5px 16px;margin-left:14px;vertical-align:3px;transition:background .2s,color .2s}
 .mosad_sitewide_alert .message .more-link:hover{background:#c9a24a;color:#14264a!important}
 .mosad_sitewide_alert .close{top:20px!important;opacity:.55}
+
+body.cco_body #header td.co_menu_item .co_submenu_container{padding:0!important}
+body.cco_body #header td.co_menu_item .co_submenu_container .wrapper{padding:8px 0!important;background:#fff!important;border-radius:0 0 11px 11px}
