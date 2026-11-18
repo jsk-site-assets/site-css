@@ -73,7 +73,7 @@ body:has(form[id="6674847"]) #id_12{display:none!important}
 html{scroll-behavior:smooth}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta{max-width:600px;margin:14px auto;text-align:center;font-family:Jost,Arial,sans-serif}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-candles{display:flex;justify-content:center;align-items:flex-end;gap:14px;height:96px;margin:6px 0 20px}
-body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-candles div{position:relative;display:block;width:20px;height:50px;border-radius:6px;background:linear-gradient(#d6e8ff,#7fb2f5)!important}
+body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-candles div{font-size:0!important;color:transparent!important;line-height:0;position:relative;display:block;width:20px;height:50px;border-radius:6px;background:linear-gradient(#d6e8ff,#7fb2f5)!important}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-candles div.sh{height:66px}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-candles div::before{content:"";position:absolute;left:50%;top:-25px;transform:translateX(-50%);width:14px;height:23px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(#fff3c0,#f6b93b 70%);box-shadow:0 0 18px 6px rgba(246,185,59,.55)}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-eyebrow{color:#f1c75a!important;font-weight:800;font-size:15px;letter-spacing:.28em;margin:0 0 10px}
