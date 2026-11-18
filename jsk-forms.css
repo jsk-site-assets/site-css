@@ -82,3 +82,5 @@ body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-h{color:#fff!im
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-h em{color:#f6d27a!important;font-variant:normal;font-style:italic;text-transform:none}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta .jsk-cta-p{color:#d4def7!important;font-size:18px;line-height:1.7;margin:0 0 22px}
 body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta a.jsk-cta-btn{display:inline-block;padding:16px 40px;border-radius:999px;background:linear-gradient(180deg,#ffd868,#eaa91f)!important;color:#1b1b1b!important;font-weight:800;font-size:19px;text-decoration:none!important;box-shadow:0 8px 26px rgba(241,199,90,.4)}
+/* v11: donate button removed from CTA block (hidden; remove this rule to bring back) */
+body:has(form[id="6674847"]) #id_11 .form-html .jsk-cta a.jsk-cta-btn{display:none!important}
