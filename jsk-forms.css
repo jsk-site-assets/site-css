@@ -297,3 +297,6 @@ body:has(form[id="6674847"]) #text_16 .hn-in>*{max-width:100%}
 body:has(form[id="6674847"]) #text_16 .hn-in>.hn-free,body:has(form[id="6674847"]) #text_16 .hn-in>.hn-b1,body:has(form[id="6674847"]) #text_16 .hn-in>.hn-b2{align-self:stretch}
 body:has(form[id="6674847"]) #text_16 .hn-b2{order:1}
 body:has(form[id="6674847"]) #text_16 .hn-b1{order:2}
+
+/* v16: keep the menorah coordinate canvas centered without flex width compression */
+body:has(form[id="6674847"]) #text_16 .hn-in>.hn-men{max-width:none;flex:none;width:100em;margin-left:auto;margin-right:auto;align-self:center}
