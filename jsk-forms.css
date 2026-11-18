@@ -291,3 +291,9 @@ body:has(form[id="6674847"]) #text_16 .hn-date{font-size:clamp(26px,7.4vw,50px);
 body:has(form[id="6674847"]) #text_16 .hn-b1{white-space:nowrap}
 /* v14: icon rows removed (hero carries the info); remove this rule to bring back */
 body:has(form[id="6674847"]) #text_16>div:not(.hn-wrap)>div:nth-child(2){display:none!important}
+/* v15: Directions button above RSVP button */
+body:has(form[id="6674847"]) #text_16 .hn-in{display:flex;flex-direction:column;align-items:center}
+body:has(form[id="6674847"]) #text_16 .hn-in>*{max-width:100%}
+body:has(form[id="6674847"]) #text_16 .hn-in>.hn-free,body:has(form[id="6674847"]) #text_16 .hn-in>.hn-b1,body:has(form[id="6674847"]) #text_16 .hn-in>.hn-b2{align-self:stretch}
+body:has(form[id="6674847"]) #text_16 .hn-b2{order:1}
+body:has(form[id="6674847"]) #text_16 .hn-b1{order:2}
