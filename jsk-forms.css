@@ -20,3 +20,48 @@ body:has(.form-all) .form-all :is(.form-submit-button,button[type=submit]):hover
 
 body.cco_body #header td.co_menu_item .co_submenu_container{padding:0!important}
 body.cco_body #header td.co_menu_item .co_submenu_container .wrapper{padding:8px 0!important;background:#fff!important;border-radius:0 0 11px 11px}
+
+/* === dark override: Chanukah RSVP form 6674847 only (v7) === */
+
+/* ---- Chanukah RSVP form 6674847: dark night theme (matches /7626045) ---- */
+body:has(form[id="6674847"]){background:linear-gradient(180deg,#07154a 0%,#0b2266 55%,#0a1b55 100%) fixed!important;border-top:0!important}
+body:has(form[id="6674847"]) :is(.body_wrapper,#co_body_container,#co_content_container,#content,#BodyContainer,#ContentBody,#cco_body,.content-area-parent,article.content,.co_body){background:none!important}
+body:has(form[id="6674847"]) .form-all{max-width:640px!important;margin:0 auto!important;padding:24px 22px 64px!important;color:#fff!important}
+body:has(form[id="6674847"]) #id_12 img{border-radius:18px;box-shadow:0 0 0 3px #c9a24a,0 18px 44px rgba(0,0,0,.5)}
+body:has(form[id="6674847"]) #text_16>div{display:flex!important;flex-direction:column;text-align:left!important;max-width:none!important;margin:0!important;padding:0!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(1){order:1;font-size:0!important;line-height:0!important;margin:0!important;color:transparent!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(1)::before{content:"RSVP \00B7  IT'S FREE";display:block;font:600 clamp(14px,3.6vw,18px)/1.2 Jost,Arial,sans-serif;letter-spacing:.3em;color:#f1c75a;margin:30px 0 14px}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(1)::after{content:"Save your spot";display:block;font:700 clamp(46px,12vw,68px)/1 "Cormorant Garamond",Georgia,serif;font-variant:small-caps;color:#fff}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(4){order:2;font-size:0!important;line-height:0!important;margin:0!important;color:transparent!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(4)::before{content:"by the light.";display:block;font:italic 600 clamp(44px,11.5vw,66px)/1.05 "Cormorant Garamond",Georgia,serif;color:#ffe08a;margin:2px 0 22px}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(3){order:3;background:none!important;border:0!important;border-radius:0!important;padding:0!important;margin:0 0 28px!important;color:#d6e2ff!important;font-family:Jost,Arial,sans-serif!important;font-size:clamp(17px,4.3vw,21px)!important;line-height:1.6!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2){order:4;display:flex;flex-direction:column;background:none!important;padding:0!important;margin:0 0 30px!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2)>div{font-family:Jost,Arial,sans-serif!important;font-size:clamp(18px,4.5vw,23px)!important;color:#fff!important;letter-spacing:0!important;line-height:1.35!important;padding:8px 0 8px 58px!important;min-height:46px;text-align:left!important;background-repeat:no-repeat!important;background-position:2px 50%!important;background-size:32px!important;margin:0!important;width:auto!important;height:auto!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2)>div:nth-child(1){order:1;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f1c75a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='16' rx='3'/><path d='M3 10h18M8 3v4M16 3v4'/></svg>")!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2)>div:nth-child(3){order:2;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f1c75a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z'/><circle cx='12' cy='9.5' r='2.6'/></svg>")!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2)>div:nth-child(2){order:3;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f1c75a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='8' width='18' height='4' rx='1'/><path d='M12 8v13M5 12v9h14v-9M12 8c-2-4-6-3-5 0 .5 1.5 3 1.5 5 0zM12 8c2-4 6-3 5 0-.5 1.5-3 1.5-5 0z'/></svg>") no-repeat 2px 50%/32px!important}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(2)>div:nth-child(2)::before{content:"Free admission, open to all"}
+body:has(form[id="6674847"]) #text_16>div>div:nth-child(5){display:none!important}
+body:has(form[id="6674847"]) .form-all :is(.form-label,label,.label-message,.form-sub-label,.form-description-content){color:#e8efff!important;font-family:Jost,Arial,sans-serif!important}
+body:has(form[id="6674847"]) .form-all .form-required{color:#f1c75a!important}
+body:has(form[id="6674847"]) .form-all :is(input[type=text],input[type=email],input[type=number],textarea,select){background:rgba(255,255,255,.09)!important;border:1px solid rgba(201,162,74,.6)!important;border-radius:12px!important;color:#fff!important}
+body:has(form[id="6674847"]) .form-all ::placeholder{color:#9fb2e2!important}
+body:has(form[id="6674847"]) .form-all :is(.form-checkbox-item,.form-radio-item){color:#fff!important;background:rgba(255,255,255,.07)!important;border-color:rgba(201,162,74,.45)!important}
+body:has(form[id="6674847"]) .form-all :is(.form-checkbox-item,.form-radio-item) label{color:#fff!important}
+body:has(form[id="6674847"]) .form-all .qty-btn{background:rgba(201,162,74,.2)!important;color:#f1c75a!important;border:1px solid rgba(201,162,74,.65)!important}
+body:has(form[id="6674847"]) #id_11 .form-html *{color:#d4def7!important;background:none!important}
+body:has(form[id="6674847"]) #id_11 .form-html div:first-child{color:#f1c75a!important}
+body:has(form[id="6674847"]) .form-all :is(.form-submit-button,button[type=submit]){background:linear-gradient(180deg,#ffd868,#eaa91f)!important;color:#2a1d02!important;border:0!important;border-radius:999px!important;padding:16px 46px!important;font-size:20px!important;font-weight:600!important;box-shadow:0 0 28px rgba(240,180,50,.4)!important}
+
+body:has(form[id="6674847"]) .form-all .form-line .form-input :is(input.form-textbox,textarea,input.form-number-input,input[type=text],input[type=email],input[type=number]){background:rgba(255,255,255,.09)!important;color:#fff!important;border-color:rgba(201,162,74,.6)!important;box-shadow:none!important}
+body:has(form[id="6674847"]) .form-all .form-line .custom-number-wrapper{background:rgba(255,255,255,.09)!important;border:1px solid rgba(201,162,74,.6)!important;border-radius:12px!important;overflow:hidden}
+body:has(form[id="6674847"]) .form-all .form-line .custom-number-wrapper .qty-btn{background:rgba(201,162,74,.22)!important;color:#f1c75a!important;border:0!important}
+body:has(form[id="6674847"]) .form-all .form-line .form-input ::placeholder{color:#9fb2e2!important;opacity:1}
+
+html body:has(form[id="6674847"]) #formContainer .form-all .form-line .form-input :is(input.form-textbox,input.form-number-input,textarea){background-color:rgba(255,255,255,.09)!important;background-image:none!important;color:#fff!important}
+body:has(form[id="6674847"]) #id_13 .form-multiple-column{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+body:has(form[id="6674847"]) #id_13 .form-multiple-column .form-radio-item{width:auto!important;margin:0!important;float:none!important;min-width:0}
+body:has(form[id="6674847"]) #id_13 .form-multiple-column .form-radio-item{grid-column:auto!important;clear:none!important}
+body:has(form[id="6674847"]) #id_13 .form-multiple-column .form-radio-item:has(.form-radio-other){grid-column:1/-1!important}
+body:has(form[id="6674847"]) :is(.secure-note,#footer_secure,.form-secure,.jfSecurity,.cco_secure){color:#8fa3d6!important}
+body:has(form[id="6674847"]) .form-all :is(.form-buttons-wrapper)~*,body:has(form[id="6674847"]) .form-all .form-all-secure{color:#8fa3d6!important}
