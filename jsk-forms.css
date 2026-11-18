@@ -65,3 +65,6 @@ body:has(form[id="6674847"]) #id_13 .form-multiple-column .form-radio-item{grid-
 body:has(form[id="6674847"]) #id_13 .form-multiple-column .form-radio-item:has(.form-radio-other){grid-column:1/-1!important}
 body:has(form[id="6674847"]) :is(.secure-note,#footer_secure,.form-secure,.jfSecurity,.cco_secure){color:#8fa3d6!important}
 body:has(form[id="6674847"]) .form-all :is(.form-buttons-wrapper)~*,body:has(form[id="6674847"]) .form-all .form-all-secure{color:#8fa3d6!important}
+
+/* v8: hide flyer image on Chanukah RSVP form 6674847 for now (remove this rule to bring it back) */
+body:has(form[id="6674847"]) #id_12{display:none!important}
