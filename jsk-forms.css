@@ -318,3 +318,15 @@ form[id="6674847"] .form-address-table .form-textbox{color:#fff!important}
 form[id="6674847"] .form-address-table .form-textbox:focus{outline:2px solid #f1c75a;outline-offset:2px}
 body form[id="6674847"] #id_15 select.form-textbox#input_15_cc_exp_month,body form[id="6674847"] #id_15 select.form-textbox#input_15_cc_exp_year,body form[id="6674847"] #id_15 select#input_15_country{background:#172c63!important;color:#fff!important;appearance:auto!important;-webkit-appearance:auto!important}
 body:has(form[id="6674847"]) form[id="6674847"] #total_amount{color:#f1c75a!important}
+
+/* Mobile announcement: keep every link inside its own bar, even with larger fonts. */
+@media(max-width:767px){
+.mosad_sitewide_alert{height:auto!important;min-height:60px!important;box-sizing:border-box!important;padding:12px 34px 12px 12px!important;overflow:visible!important}
+.mosad_sitewide_alert .message{position:static!important;top:auto!important;left:auto!important;transform:none!important;width:100%!important;height:auto!important;line-height:1.25!important;margin:0!important;padding:0!important;font-size:0!important}
+.mosad_sitewide_alert .message .js-sitewide-alert-item{height:auto!important;min-height:34px!important}
+.mosad_sitewide_alert .message .alert-links{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;gap:8px!important;font-size:0!important;line-height:1.25!important}
+.mosad_sitewide_alert .message .alert-links::before{font-size:20px!important;margin:0!important;flex:0 0 auto}
+.mosad_sitewide_alert .message a:not(.more-link){font-size:22px!important;line-height:1.2!important;white-space:nowrap!important}
+.mosad_sitewide_alert .message .more-link{display:inline-block!important;flex:0 0 auto!important;white-space:nowrap!important;font-size:11px!important;line-height:1.3!important;padding:6px 12px!important;margin:0!important;vertical-align:baseline!important}
+.mosad_sitewide_alert .close{right:8px!important;top:21px!important}
+}
