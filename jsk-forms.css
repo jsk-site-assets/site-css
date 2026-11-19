@@ -47,7 +47,7 @@ body:has(form[id="6674847"]) .form-all :is(.form-label,label,.label-message,.for
 body:has(form[id="6674847"]) .form-all .form-required{color:#f1c75a!important}
 body:has(form[id="6674847"]) .form-all :is(input[type=text],input[type=email],input[type=number],textarea,select){background:rgba(255,255,255,.09)!important;border:1px solid rgba(201,162,74,.6)!important;border-radius:12px!important;color:#fff!important}
 body:has(form[id="6674847"]) .form-all ::placeholder{color:#9fb2e2!important}
-body:has(form[id="6674847"]) .form-all :is(.form-checkbox-item,.form-radio-item){color:#fff!important;background:rgba(255,255,255,.07)!important;border-color:rgba(201,162,74,.45)!important}
+body:has(form[id="6674847"]) .form-all :is(.form-checkbox-item,.form-radio-item){color:#fff!important;background:none!important;border-color:rgba(201,162,74,.45)!important}
 body:has(form[id="6674847"]) .form-all :is(.form-checkbox-item,.form-radio-item) label{color:#fff!important}
 body:has(form[id="6674847"]) .form-all .qty-btn{background:rgba(201,162,74,.2)!important;color:#f1c75a!important;border:1px solid rgba(201,162,74,.65)!important}
 body:has(form[id="6674847"]) #id_11 .form-html *{color:#d4def7!important;background:none!important}
