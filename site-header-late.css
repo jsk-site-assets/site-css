@@ -1,0 +1,15 @@
+/* jsk site header CSS (about-section, post-forms) - migrated 2026-11-20 */
+/*jsk-about v2: About = jewishedenprairie.com design 2026-11-19*/
+.home.cco_body .hp-table .hp-row:has(>.widget-4.message){background-image:radial-gradient(120% 90% at 12% 0%,#FFF9EC 0%,#FBF7F0 46%,#F2E7D5 100%)!important}
+.home.cco_body .hp-table .hp-row .widget-4.message .wrapper{max-width:1080px}
+.home .widget-4.message .jsk-title,.home .widget-4.message .jsk-trio span,.home .widget-4.message .jsk-close{font-family:"Instrument Serif",Georgia,serif;font-weight:400;color:#17120E}
+.home .widget-4.message .jsk-title{display:block;font-size:76px;line-height:1.02;letter-spacing:-.025em;max-width:21ch;margin:0 auto}
+.home .widget-4.message .jsk-intro{font-family:Newsreader,Georgia,serif;font-weight:300;font-size:21px;line-height:1.7;color:#52463A;max-width:62ch;margin:40px auto 0}
+.home .widget-4.message .jsk-trio{display:grid;grid-template-columns:repeat(3,1fr);margin:40px auto 0;border-top:1px solid rgba(23,18,14,.14);border-bottom:1px solid rgba(23,18,14,.14)}
+.home .widget-4.message .jsk-trio span{font-size:34px;line-height:1.15;padding:32px 20px;border-right:1px solid rgba(23,18,14,.14)}
+.home .widget-4.message .jsk-trio span:last-child{border-right:0}
+.home .widget-4.message .jsk-close{font-style:italic;font-size:30px;line-height:1.4;color:#4A3B2C;max-width:34ch;margin:40px auto 0}
+@media(max-width:1100px){.home .widget-4.message .jsk-title{font-size:58px}}
+@media(max-width:860px){.home .widget-4.message .jsk-trio{grid-template-columns:1fr}.home .widget-4.message .jsk-trio span{border-right:0;border-bottom:1px solid rgba(23,18,14,.14);padding:22px 12px}.home .widget-4.message .jsk-trio span:last-child{border-bottom:0}}
+@media(max-width:600px){.home .widget-4.message .jsk-title{font-size:40px}.home .widget-4.message .jsk-intro{font-size:18px}.home .widget-4.message .jsk-trio span{font-size:26px}.home .widget-4.message .jsk-close{font-size:24px}}
+.home .widget-4.message .widget_header{display:none}
