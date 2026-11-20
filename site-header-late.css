@@ -32,3 +32,39 @@ body.cco_body.home #footer .footer_text a,body.cco_body:not(.home) #footer .foot
 body.cco_body.home #footer .footer_text a:hover,body.cco_body:not(.home) #footer .footer_text a:hover{color:#a8852f!important}
 body.cco_body.home #footer .cs-f-social-icons a,body.cco_body:not(.home) #footer .cs-f-social-icons a{color:#a8852f!important;border:1px solid #c9a24a!important;border-radius:50%!important;background:transparent!important;display:inline-flex!important;align-items:center;justify-content:center;width:34px;height:34px}
 body.cco_body.home #footer .cs-f-social-icons a:hover,body.cco_body:not(.home) #footer .cs-f-social-icons a:hover{color:#fff!important;background:#a8852f!important}
+/* design menu #1: program tiles as cream cards (approved 2026-11-20) */
+.home .sneak-peek-item .sneak_peek{background:#fbf8f1!important;border:1px solid #ece5d4!important;border-radius:18px!important;box-shadow:0 8px 24px rgba(24,36,82,.07)!important;transition:transform .25s ease,box-shadow .25s ease!important;overflow:hidden}
+.home .sneak-peek-item .sneak_peek:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(24,36,82,.13)!important}
+.home .sneak-peek-item .sneak_peek h6.title_only a::after{color:#a8852f!important}
+/* design menu #2: drop Playfair, Cormorant everywhere (approved 2026-11-20) */
+[style*="Playfair"],[style*="playfair"]{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important}
+body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#3b4a5e"] [style*="font-size:72px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#3b4a5e"] [style*="font-size:36px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#ffffff"] [style*="font-size:23px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#faf7f1"]>[style*="font-size:23px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#efe7d6"] [style*="font-size:25px"]{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important}
+html:has(link[rel="canonical"][href*="/aid/6932307/"]) body.cco_body:not(.home) #BodyContainer #co_content_container .master-content-wrapper.master-co h1,html:has(link[rel="canonical"][href*="/aid/6932307/"]) body.cco_body:not(.home) #BodyContainer #co_content_container .master-content-wrapper.master-co h2{font-family:"Cormorant Garamond",Georgia,serif!important}
+/* design menu #3: unified gold pill buttons (approved 2026-11-20) */
+.home.cco_body .hp-table .hp-row.hp_content_wrapper .upcoming_events .readMore,
+.home.cco_body .hp-table .hp-row:not(.hp-row-first) .message .readMore,
+.home.cco_body .hp-table .hp-row:not(.hp-row-first) .latest_photos .readMore{background:#a8852f!important;color:#fdf9ef!important;border:1px solid #a8852f!important;border-radius:999px!important}
+.home.cco_body .hp-table .hp-row.hp_content_wrapper .upcoming_events .readMore:hover,
+.home.cco_body .hp-table .hp-row:not(.hp-row-first) .message .readMore:hover,
+.home.cco_body .hp-table .hp-row:not(.hp-row-first) .latest_photos .readMore:hover{background:#8a6d2f!important;border-color:#8a6d2f!important;color:#fff!important}
+.home.cco_body .hp-table .hp-row-first .promo_slider .slider .cycle-caption .readMore{color:#f2d88a!important;border:1.5px solid rgba(242,216,138,.9)!important;border-radius:999px!important}
+.home.cco_body .hp-table .hp-row-first .promo_slider .slider .cycle-caption .readMore:hover{background:#c9a24a!important;border-color:#c9a24a!important;color:#182452!important}
+/* design menu #4: gold date badges on Upcoming Events (approved 2026-11-20; badges built by site-header.js) */
+.home .widget-4.upcoming_events li{display:flex!important;align-items:center!important;gap:14px!important;background:#fff!important;border:1px solid #ece5d4!important;border-radius:14px!important;padding:12px 14px!important;margin:0 0 10px!important;box-shadow:0 4px 14px rgba(24,36,82,.05)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.home .widget-4.upcoming_events li:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(24,36,82,.1)!important}
+.home .widget-4.upcoming_events li small.jsk-badge{flex:0 0 54px;width:54px;height:54px;border-radius:50%!important;background:#a8852f!important;color:#fff!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;font-family:Jost,sans-serif!important;margin:0!important;padding:0!important;line-height:1.05!important;text-align:center}
+.home .widget-4.upcoming_events li small.jsk-badge .d{font-size:20px;font-weight:600}
+.home .widget-4.upcoming_events li small.jsk-badge .m{font-size:10px;font-weight:500;letter-spacing:.12em}
+.home .widget-4.upcoming_events li .jsk-ev-body h6{margin:0!important}
+.home .widget-4.upcoming_events li .jsk-ev-time{display:block;font:500 11px Jost,sans-serif;letter-spacing:.1em;color:#8a7a55;margin-top:3px;text-transform:uppercase}
+/* design menu #6: form polish, Chai Club form 6932307 (approved 2026-11-20) */
+form[id="6932307"] .form-all input[type=text],form[id="6932307"] .form-all input[type=email],form[id="6932307"] .form-all input[type=tel],form[id="6932307"] .form-all input[type=number],form[id="6932307"] .form-all select,form[id="6932307"] .form-all textarea{border:1px solid #ddd3c0!important;border-radius:10px!important;background:#fffdf8!important;padding:12px 14px!important;box-shadow:none!important}
+form[id="6932307"] .form-all input:focus,form[id="6932307"] .form-all select:focus,form[id="6932307"] .form-all textarea:focus{border-color:#c9a24a!important;box-shadow:0 0 0 3px rgba(201,162,74,.18)!important;outline:none!important}
+form[id="6932307"] .form-all label{font:500 11px Jost,sans-serif!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#6b5b3e!important}
+form[id="6932307"] .form-all input[type=submit],form[id="6932307"] .form-all button[type=submit]{border-radius:999px!important;background:#a8852f!important;border:0!important;color:#fff!important;font:500 13px Jost,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;padding:14px 34px!important}
+form[id="6932307"] .form-all input[type=submit]:hover{background:#8a6d2f!important}
+/* design menu #8: tighter mobile hero (approved 2026-11-20; heights also enforced by site-header.js) */
+@media(max-width:640px){
+.home .promo_slider,.home .promo_slider .slider,.home .promo_slider .cycle-slideshow,.home .promo_slider .slides,.home .promo_slider .slides li,.home .promo_slider .slide_wrapper,.home .promo_slider .slide{height:340px!important;min-height:0!important}
+.home .promo_slider .slides li img,.home .promo_slider .slide img{height:340px!important}
+                                   }
