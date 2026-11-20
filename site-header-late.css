@@ -63,8 +63,3 @@ form[id="6932307"] .form-all input:focus,form[id="6932307"] .form-all select:foc
 form[id="6932307"] .form-all label{font:500 11px Jost,sans-serif!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#6b5b3e!important}
 form[id="6932307"] .form-all input[type=submit],form[id="6932307"] .form-all button[type=submit]{border-radius:999px!important;background:#a8852f!important;border:0!important;color:#fff!important;font:500 13px Jost,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;padding:14px 34px!important}
 form[id="6932307"] .form-all input[type=submit]:hover{background:#8a6d2f!important}
-/* design menu #8: tighter mobile hero (approved 2026-11-20; heights also enforced by site-header.js) */
-@media(max-width:640px){
-.home .promo_slider,.home .promo_slider .slider,.home .promo_slider .cycle-slideshow,.home .promo_slider .slides,.home .promo_slider .slides li,.home .promo_slider .slide_wrapper,.home .promo_slider .slide{height:340px!important;min-height:0!important}
-.home .promo_slider .slides li img,.home .promo_slider .slide img{height:340px!important}
-                                   }
