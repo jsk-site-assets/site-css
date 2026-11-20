@@ -68,3 +68,6 @@ body.cco_body .mosad_sitewide_alert{display:flex!important;align-items:center!im
 body.cco_body .mosad_sitewide_alert .message{display:flex!important;align-items:center!important;justify-content:center!important;height:auto!important;max-height:38px!important;overflow:hidden!important}
 body.cco_body .mosad_sitewide_alert .js-sitewide-alert-item{height:auto!important;max-height:38px!important;overflow:hidden!important}
 body.cco_body .mosad_sitewide_alert .close{top:50%!important;margin-top:-9px!important}
+
+/* BH badge: align with logo/site-title row on mobile (moved off its own line) */
+@media(max-width:767px){.home.cco_body #BodyContainer>.body_wrapper.no-hero-image::before{top:75px!important}}
