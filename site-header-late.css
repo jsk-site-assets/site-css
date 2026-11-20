@@ -63,3 +63,8 @@ form[id="6932307"] .form-all input:focus,form[id="6932307"] .form-all select:foc
 form[id="6932307"] .form-all label{font:500 11px Jost,sans-serif!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#6b5b3e!important}
 form[id="6932307"] .form-all input[type=submit],form[id="6932307"] .form-all button[type=submit]{border-radius:999px!important;background:#a8852f!important;border:0!important;color:#fff!important;font:500 13px Jost,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;padding:14px 34px!important}
 form[id="6932307"] .form-all input[type=submit]:hover{background:#8a6d2f!important}
+/* announcement bar fix 2026-11-20: slim 38px bar (theme min-height + whitespace text nodes inflated it to 60px) */
+body.cco_body .mosad_sitewide_alert{display:flex!important;align-items:center!important;justify-content:center!important;height:38px!important;min-height:0!important;padding:0 42px 0 12px!important;position:relative!important;box-sizing:border-box!important}
+body.cco_body .mosad_sitewide_alert .message{display:flex!important;align-items:center!important;justify-content:center!important;height:auto!important;max-height:38px!important;overflow:hidden!important}
+body.cco_body .mosad_sitewide_alert .js-sitewide-alert-item{height:auto!important;max-height:38px!important;overflow:hidden!important}
+body.cco_body .mosad_sitewide_alert .close{top:50%!important;margin-top:-9px!important}
