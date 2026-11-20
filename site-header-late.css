@@ -69,5 +69,5 @@ body.cco_body .mosad_sitewide_alert .message{display:flex!important;align-items:
 body.cco_body .mosad_sitewide_alert .js-sitewide-alert-item{height:auto!important;max-height:38px!important;overflow:hidden!important}
 body.cco_body .mosad_sitewide_alert .close{top:50%!important;margin-top:-9px!important}
 
-/* BH badge: align with logo/site-title row on mobile (moved off its own line) */
-@media(max-width:767px){.home.cco_body #BodyContainer>.body_wrapper.no-hero-image::before{top:75px!important}}
+/* BH badge: anchored to the logo row on mobile (tracks the header whether the announcement bar is open or closed) */
+@media(max-width:767px){.home.cco_body #BodyContainer>.body_wrapper.no-hero-image::before{display:none!important}body.home.cco_body #header .branding-search{position:relative!important}body.home.cco_body #header .branding-search::before{content:"\05D1\"\05D4";position:absolute;top:50%;transform:translateY(-50%);inset-inline-end:15px;background:rgba(0,0,0,.5);color:#fff;font:12px Muli,sans-serif;padding:4px 6px;border-radius:4px;z-index:101}}
