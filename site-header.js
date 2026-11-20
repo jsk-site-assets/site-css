@@ -50,22 +50,3 @@ body.appendChild(tm);
 });
 }catch(e){}
 });
-/* design menu #8: tighter mobile hero (approved 2026-11-20) */
-document.addEventListener("DOMContentLoaded",function(){
-try{
-var sel=".home .promo_slider,.home .promo_slider .slider,.home .promo_slider .cycle-slideshow,.home .promo_slider .slides,.home .promo_slider .slides li,.home .promo_slider .slide_wrapper,.home .promo_slider .slide,.home .promo_slider .slides li img,.home .promo_slider .slide img";
-var apply=function(){
-var els=document.querySelectorAll(sel);
-if(window.innerWidth>640){
-for(var j=0;j<els.length;j++){if(els[j].getAttribute("data-jsk-hero")){els[j].style.removeProperty("height");els[j].removeAttribute("data-jsk-hero");}}
-return;
-}
-for(var i=0;i<els.length;i++){els[i].style.setProperty("height","340px","important");els[i].setAttribute("data-jsk-hero","1");}
-};
-apply();
-window.addEventListener("load",apply);
-window.addEventListener("resize",apply);
-if(window.jQuery){jQuery(document).on("cycle-initialized cycle-after",".home .promo_slider .cycle-slideshow",function(){setTimeout(apply,60);});}
-setTimeout(apply,1500);setTimeout(apply,4000);
-}catch(e){}
-});
