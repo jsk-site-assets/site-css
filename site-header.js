@@ -90,3 +90,28 @@ document.addEventListener("click",function(e){
     if(++n<16)setTimeout(chk,250);
   })();
 });
+
+/* sliding festival alert: transform the sitewide alert into a sliding event-info bar with a fixed RSVP button (approved 2026-11-22) */
+document.addEventListener("DOMContentLoaded",function(){
+try{
+var a=document.querySelector(".mosad_sitewide_alert");
+if(!a||a.getAttribute("data-jsk-slide"))return;
+var link=a.querySelector('a[href*="6674847"],a[href*="chanukah" i]');
+var txt=a.textContent||"";
+if(!link&&txt.indexOf("Chanukah Festival")===-1)return;
+a.setAttribute("data-jsk-slide","1");
+var href=link?link.getAttribute("href"):"/6674847";
+var items=["Chanukah Festival!","Sunday, December 6","3:30 PM","Bakerview Park \u00b7 Mount Vernon","Free Admission \u00b7 Open to All"];
+var seq="";
+for(var i=0;i<items.length;i++){seq+='<span class="jsk-alert-item">'+items[i]+'</span><span class="jsk-alert-dot">\u2022</span>';}
+var msg=a.querySelector(".message");
+if(!msg)return;
+msg.innerHTML='<div class="jsk-alert-marquee"><div class="jsk-alert-track"><span class="jsk-alert-seq">'+seq+'</span><span class="jsk-alert-seq" aria-hidden="true">'+seq+'</span></div></div>';
+var btn=document.createElement("a");
+btn.className="jsk-alert-rsvp";
+btn.href=href;
+btn.innerHTML='RSVP Free <span aria-hidden="true">\u2192</span>';
+var close=a.querySelector(".close");
+a.insertBefore(btn,close||null);
+}catch(e){}
+});
