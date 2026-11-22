@@ -38,3 +38,11 @@ body:has(form[id="6932307"]) #cco_body{overflow:visible!important}
 @keyframes jskcfL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes jskcfR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 form[id="6932307"] #jsk-cf span,form[id="6932307"] #jsk-cf div{font-family:'Playfair Display',Georgia,'Times New Roman',serif!important}
+/* Chai Club centered reading column. Background bands and member tracks unchanged. */
+body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#ffffff"] > div{max-width:600px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#faf7f1"] > div:first-child{max-width:620px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+@media(max-width:767px){body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#ffffff"] > div{max-width:300px!important}}
+/* Slightly larger member names and a little more room between tier rows. */
+form[id="6932307"] #jsk-cf{gap:26px!important}
+form[id="6932307"] #jsk-cf span[style*="font-size:23px"]{font-size:25px!important}
+form[id="6932307"] #jsk-cf > div > div:nth-child(2){height:38px!important}
