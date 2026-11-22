@@ -38,8 +38,6 @@ body.cco_body.home #footer .cs-f-social-icons a:hover,body.cco_body:not(.home) #
 .home .sneak-peek-item .sneak_peek h6.title_only a::after{color:#a8852f!important}
 /* design menu #2: drop Playfair, Cormorant everywhere (approved 2026-11-20) */
 [style*="Playfair"],[style*="playfair"]{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important}
-body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#3b4a5e"] [style*="font-size:72px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#3b4a5e"] [style*="font-size:36px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#ffffff"] [style*="font-size:23px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#faf7f1"]>[style*="font-size:23px"],body.cco_body.form form[id="6932307"] li.form-line#id_30 .form-html td[style*="background:#efe7d6"] [style*="font-size:25px"]{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important}
-html:has(link[rel="canonical"][href*="/aid/6932307/"]) body.cco_body:not(.home) #BodyContainer #co_content_container .master-content-wrapper.master-co h1,html:has(link[rel="canonical"][href*="/aid/6932307/"]) body.cco_body:not(.home) #BodyContainer #co_content_container .master-content-wrapper.master-co h2{font-family:"Cormorant Garamond",Georgia,serif!important}
 /* design menu #3: unified gold pill buttons (approved 2026-11-20) */
 .home.cco_body .hp-table .hp-row.hp_content_wrapper .upcoming_events .readMore,
 .home.cco_body .hp-table .hp-row:not(.hp-row-first) .message .readMore,
@@ -71,3 +69,7 @@ body.cco_body .mosad_sitewide_alert .close{top:50%!important;margin-top:-9px!imp
 
 /* BH badge: anchored to the logo row on mobile (tracks the header whether the announcement bar is open or closed) */
 @media(max-width:767px){.home.cco_body #BodyContainer>.body_wrapper.no-hero-image::before{display:none!important}body.home.cco_body #header .branding-search{position:relative!important}body.home.cco_body #header .branding-search::before{content:"\05D1\"\05D4";position:absolute;top:50%;transform:translateY(-50%);inset-inline-end:15px;background:rgba(0,0,0,.5);color:#fff;font:12px Muli,sans-serif;padding:4px 6px;border-radius:4px;z-index:101}}
+/* bar-open offset fix 2026-11-21: header sits right below the slim 38px ticker (approved) */
+#new-campaign-ticker-wrapper ~ #header:not(.on-scroll){margin-top:38px!important}
+/* remove theme BH badge on inner pages 2026-11-21 (approved); home keeps its header badge */
+body.cco_body:not(.home) .body_wrapper::before{display:none!important}
