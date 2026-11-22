@@ -115,3 +115,61 @@ var close=a.querySelector(".close");
 a.insertBefore(btn,close||null);
 }catch(e){}
 });
+
+/* Chai Club page (aid 6932307): Golden Hour members section - compact counterflow tier rows built from the existing tier tables. Tracks are absolutely positioned so the email-table layout cannot stretch; bleed margin is measured at runtime because the form card is off-center on mobile. */
+document.addEventListener("DOMContentLoaded",function(){
+try{
+var form=document.querySelector('form[id="6932307"]');
+var li=document.getElementById("id_30");
+if(!form||!li)return;
+var td=li.querySelector('.form-html td[style*="background:#faf7f1"]');
+if(!td||document.getElementById("jsk-cf"))return;
+var heading=td.querySelector("div");
+var tables=[].slice.call(td.querySelectorAll("table"));
+if(!heading||tables.length<3)return;
+var SERIF="'Playfair Display',Georgia,'Times New Roman',serif";
+var tiers=[];
+for(var i=0;i<3;i++){
+  var labelEl=tables[i].querySelector("div");
+  var nameEls=[].slice.call(tables[i].querySelectorAll("span")).filter(function(s){return !s.classList.contains("cgc")&&s.textContent.trim();});
+  if(!labelEl||!nameEls.length)return;
+  tiers.push({label:labelEl.textContent.trim(),names:nameEls.map(function(s){return s.textContent.trim();})});
+}
+tables.forEach(function(t){t.style.display="none";});
+function runHTML(names){
+  return names.map(function(n){return '<span style="font-family:'+SERIF+'!important;font-size:23px;color:#2b3340;padding:0 4px;">'+n+"</span>"}).join('<span style="color:#a8832f;padding:0 10px;">\u00b7</span>')+'<span style="color:#a8832f;padding:0 10px;">\u00b7</span>';
+}
+var wrap=document.createElement("div");wrap.id="jsk-cf";
+wrap.style.cssText="display:flex;flex-direction:column;gap:20px;padding:4px 0 26px;overflow:hidden;max-width:100%;";
+var rows=[];
+tiers.forEach(function(t,i){
+  var row=document.createElement("div");row.style.cssText="display:flex;align-items:center;gap:14px;";
+  var lab=document.createElement("div");lab.textContent=t.label;
+  lab.style.cssText="flex:0 0 74px;text-align:right;font-family:"+SERIF+"!important;font-size:12px;letter-spacing:2px;color:#a8832f;text-transform:uppercase;";
+  var view=document.createElement("div");view.style.cssText="flex:1;min-width:0;position:relative;overflow:hidden;border-left:1px solid #d4b26a;height:34px;";
+  var track=document.createElement("div");track.style.cssText="position:absolute;left:14px;top:0;bottom:0;display:inline-flex;align-items:center;white-space:nowrap;";
+  view.appendChild(track);row.appendChild(lab);row.appendChild(view);wrap.appendChild(row);
+  rows.push({t:t,view:view,track:track,i:i});
+});
+heading.insertAdjacentElement("afterend",wrap);
+function fixBleed(){li.style.setProperty("margin-left",(parseFloat(getComputedStyle(li).marginLeft)-li.getBoundingClientRect().left)+"px","important");}
+function fill(){
+  rows.forEach(function(r){
+    var vw=r.view.clientWidth||600;
+    var meas=document.createElement("div");meas.style.cssText="position:absolute;visibility:hidden;white-space:nowrap;";
+    meas.innerHTML=runHTML(r.t.names);document.body.appendChild(meas);
+    var runW=meas.offsetWidth||600;meas.remove();
+    var copies=Math.max(1,Math.ceil(vw/runW));
+    var half="";for(var k=0;k<copies;k++)half+=runHTML(r.t.names);
+    r.track.innerHTML=half+half;
+    var dur=Math.max(10,Math.round(runW*copies/55));
+    r.track.style.animation=(r.i%2?"jskcfR":"jskcfL")+" "+dur+"s linear infinite";
+  });
+}
+fixBleed();
+window.addEventListener("load",fixBleed);
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fill);}else{fill();}
+var lastW=window.innerWidth,rt;
+window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){if(window.innerWidth!==lastW){lastW=window.innerWidth;fixBleed();fill();}},250);});
+}catch(e){}
+});
