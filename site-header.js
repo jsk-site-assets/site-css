@@ -78,3 +78,15 @@ for(var m=0;m<kids.length;m++){var c2=kids[m].cloneNode(true);c2.classList.add("
 }
 }catch(e){}
 });
+
+/* alert close cleanup 2026-11-21: the theme close handler sets the cookie and hides the alert with inline display:none but leaves the element in the DOM, which keeps the 38px header offset; remove the element once hidden so the offset clears */
+document.addEventListener("click",function(e){
+  var t=e.target&&e.target.closest?e.target.closest(".mosad_sitewide_alert .close"):null;
+  if(!t)return;
+  var a=document.querySelector(".mosad_sitewide_alert"),n=0;
+  (function chk(){
+    if(!a||!a.isConnected)return;
+    if(getComputedStyle(a).display==="none"){a.remove();return;}
+    if(++n<16)setTimeout(chk,250);
+  })();
+});
