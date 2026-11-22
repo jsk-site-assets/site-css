@@ -62,14 +62,14 @@ form[id="6932307"] .form-all label{font:500 11px Jost,sans-serif!important;lette
 form[id="6932307"] .form-all input[type=submit],form[id="6932307"] .form-all button[type=submit]{border-radius:999px!important;background:#a8852f!important;border:0!important;color:#fff!important;font:500 13px Jost,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;padding:14px 34px!important}
 form[id="6932307"] .form-all input[type=submit]:hover{background:#8a6d2f!important}
 /* announcement bar fix 2026-11-20: slim 38px bar (theme min-height + whitespace text nodes inflated it to 60px) */
-body.cco_body .mosad_sitewide_alert{display:flex!important;align-items:center!important;justify-content:center!important;height:38px!important;min-height:0!important;padding:0 42px 0 12px!important;position:relative!important;box-sizing:border-box!important}
+body.cco_body .mosad_sitewide_alert{display:flex;align-items:center!important;justify-content:center!important;height:38px!important;min-height:0!important;padding:0 42px 0 12px!important;position:relative!important;box-sizing:border-box!important}
 body.cco_body .mosad_sitewide_alert .message{display:flex!important;align-items:center!important;justify-content:center!important;height:auto!important;max-height:38px!important;overflow:hidden!important}
 body.cco_body .mosad_sitewide_alert .js-sitewide-alert-item{height:auto!important;max-height:38px!important;overflow:hidden!important}
 body.cco_body .mosad_sitewide_alert .close{top:50%!important;margin-top:-9px!important}
 
 /* BH badge: anchored to the logo row on mobile (tracks the header whether the announcement bar is open or closed) */
 @media(max-width:767px){.home.cco_body #BodyContainer>.body_wrapper.no-hero-image::before{display:none!important}body.home.cco_body #header .branding-search{position:relative!important}body.home.cco_body #header .branding-search::before{content:"\05D1\"\05D4";position:absolute;top:50%;transform:translateY(-50%);inset-inline-end:15px;background:rgba(0,0,0,.5);color:#fff;font:12px Muli,sans-serif;padding:4px 6px;border-radius:4px;z-index:101}}
-/* bar-open offset fix 2026-11-21: header sits right below the slim 38px ticker (approved) */
-#new-campaign-ticker-wrapper ~ #header:not(.on-scroll){margin-top:38px!important}
+/* bar-open offset fix 2026-11-21: header sits right below the slim 38px alert bar (alert is a direct body child; the #new-campaign-ticker-wrapper id the theme CSS names does not exist in the DOM) */
+.mosad_sitewide_alert ~ #header:not(.on-scroll){margin-top:38px!important}
 /* remove theme BH badge on inner pages 2026-11-21 (approved); home keeps its header badge */
 body.cco_body:not(.home) .body_wrapper::before{display:none!important}
