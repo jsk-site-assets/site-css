@@ -17,6 +17,7 @@ b.innerHTML=h.replace(u,r);
 /* design menu #2: Playfair -> Cormorant, site-wide (approved 2026-11-20) */
 document.addEventListener("DOMContentLoaded",function(){
 try{
+if(location.href.indexOf("/aid/6932307/")>-1)return;
 var all=document.querySelectorAll("h1,h2,h3,h4,h5,h6,div,span,p,a,td,strong,b,label,li");
 for(var i=0;i<all.length;i++){
 var f=window.getComputedStyle(all[i]).fontFamily||"";
@@ -48,5 +49,32 @@ tm.textContent=dow+(time?" \u00b7 "+time:"");
 body.appendChild(tm);
 }
 });
+}catch(e){}
+});
+/* chai club: member name marquee - one sliding line per tier (approved 2026-11-21) */
+document.addEventListener("DOMContentLoaded",function(){
+try{
+if(location.href.indexOf("/aid/6932307/")===-1)return;
+var root=document.querySelector('li.form-line#id_30 .form-html');
+if(!root||root.getAttribute("data-jsk-marq"))return;
+root.setAttribute("data-jsk-marq","1");
+var tds=root.querySelectorAll('td[style*="padding:2px 0 2px 18px"]');
+for(var i=0;i<tds.length;i++){
+var label=tds[i].querySelector('div[style*="font-size:20px"]');
+var box=label&&label.nextElementSibling;
+if(!box||box.classList.contains("cgv"))continue;
+var set=[].slice.call(box.querySelectorAll("span"));
+if(!set.length)continue;
+var target=Math.max(box.clientWidth,320);
+var cgv=document.createElement("div");cgv.className="cgv";
+var cgs=document.createElement("div");cgs.className="cgs";
+for(var j=0;j<set.length;j++)cgs.appendChild(set[j]);
+cgv.appendChild(cgs);
+box.parentNode.replaceChild(cgv,box);
+var setW=cgs.scrollWidth||1,halfW=setW,guard=0;
+while(halfW<target&&guard<10){for(var k=0;k<set.length;k++){var c=set[k].cloneNode(true);c.classList.add("cgc");cgs.appendChild(c);}halfW+=setW;guard++;}
+var kids=[].slice.call(cgs.children);
+for(var m=0;m<kids.length;m++){var c2=kids[m].cloneNode(true);c2.classList.add("cgc");cgs.appendChild(c2);}
+}
 }catch(e){}
 });
