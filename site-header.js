@@ -1,19 +1,36 @@
-/* jsk site header JS - migrated from ChabadOne customheader 2026-11-20 */
-document.addEventListener("DOMContentLoaded",function(){
+/* About block startup repair. Existing markup and styling unchanged. */
+(function(){
+var observer=null,timer=null;
+function stop(){if(observer)observer.disconnect();if(timer)clearTimeout(timer);}
+function formatAbout(){
 try{
 if(!document.body||!document.body.classList.contains("home"))return;
 var b=document.querySelector(".home .widget-4.message .bottom_padding");
-if(!b||b.getAttribute("data-jsk-about"))return;
+if(!b)return false;
+if(b.getAttribute("data-jsk-about"))return true;
 var h=b.innerHTML;
 var r='<div class="jsk-trio"><span>No labels</span><span>No membership</span><span>No prerequisites</span></div><p class="jsk-close">Just a place for Jews in Skagit County to find each other.</p>';
 var t="Something Jewish is growing in Skagit County.<br><br>Welcome to Chabad of Skagit County, a warm and welcoming home for every Jew, whatever your background or level of observance. Come as you are.<br><br>No labels. No membership. No prerequisites.";
-if(h.indexOf(t)>-1){var p=t.split("<br><br>");b.setAttribute("data-jsk-about","1");b.innerHTML=h.replace(t,'<span class="jsk-title">'+p[0]+'</span><p class="jsk-intro">'+p[1]+'</p>'+r);return;}
+if(h.indexOf(t)>-1){var p=t.split("<br><br>");b.setAttribute("data-jsk-about","1");b.innerHTML=h.replace(t,'<span class="jsk-title">'+p[0]+'</span><p class="jsk-intro">'+p[1]+'</p>'+r);return true;}
 var u="No labels. No membership. No prerequisites.";
 if(h.indexOf(u)===-1)return;
 b.setAttribute("data-jsk-about","1");
 b.innerHTML=h.replace(u,r);
+return true;
 }catch(e){}
-});
+
+}
+function run(){
+if(formatAbout()){stop();return;}
+if(!observer&&document.documentElement){
+observer=new MutationObserver(function(){if(formatAbout())stop();});
+observer.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+timer=setTimeout(stop,15000);
+}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});
+else run();
+})();
 /* design menu #2: Playfair -> Cormorant, site-wide (approved 2026-11-20) */
 document.addEventListener("DOMContentLoaded",function(){
 try{
