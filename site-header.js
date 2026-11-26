@@ -42,11 +42,16 @@ if(/playfair/i.test(f)){all[i].style.setProperty("font-family","'Cormorant Garam
 }
 }catch(e){}
 });
-/* design menu #4: gold date badges on Upcoming Events (approved 2026-11-20) */
-document.addEventListener("DOMContentLoaded",function(){
+/* Upcoming Events startup repair. Existing badges and styling unchanged. */
+(function(){
+var observer=null,timer=null;
+function stop(){if(observer)observer.disconnect();if(timer)clearTimeout(timer);}
+function formatEvents(){
 try{
 if(!document.body||!document.body.classList.contains("home"))return;
-document.querySelectorAll(".home .widget-4.upcoming_events li").forEach(function(li){
+var items=document.querySelectorAll(".home .widget-4.upcoming_events li");
+if(!items.length)return false;
+items.forEach(function(li){
 if(li.getAttribute("data-jsk-badge"))return;
 var sm=li.querySelector("small");if(!sm)return;
 var t=sm.textContent.replace(/\s+/g," ").trim();
@@ -66,8 +71,21 @@ tm.textContent=dow+(time?" \u00b7 "+time:"");
 body.appendChild(tm);
 }
 });
+return !Array.prototype.some.call(items,function(li){return !li.getAttribute("data-jsk-badge");});
 }catch(e){}
-});
+
+}
+function run(){
+if(formatEvents()){stop();return;}
+if(!observer&&document.documentElement){
+observer=new MutationObserver(function(){if(formatEvents())stop();});
+observer.observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+timer=setTimeout(stop,15000);
+}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});
+else run();
+})();
 /* chai club: member name marquee - one sliding line per tier (approved 2026-11-21) */
 document.addEventListener("DOMContentLoaded",function(){
 try{
