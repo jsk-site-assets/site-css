@@ -126,21 +126,26 @@ document.addEventListener("click",function(e){
   })();
 });
 
-/* sliding festival alert: transform the sitewide alert into a sliding event-info bar with a fixed RSVP button (approved 2026-11-22) */
-document.addEventListener("DOMContentLoaded",function(){
+/* Festival announcement startup repair. Existing bar and button unchanged. */
+(function(){
+var observer=null,timer=null;
+function stop(){if(observer)observer.disconnect();if(timer)clearTimeout(timer);}
+function formatAlert(){
 try{
 var a=document.querySelector(".mosad_sitewide_alert");
-if(!a||a.getAttribute("data-jsk-slide"))return;
+if(!a)return false;
+if(a.getAttribute("data-jsk-slide"))return true;
 var link=a.querySelector('a[href*="6674847"],a[href*="chanukah" i]');
 var txt=a.textContent||"";
 if(!link&&txt.indexOf("Chanukah Festival")===-1)return;
-a.setAttribute("data-jsk-slide","1");
+
 var href=link?link.getAttribute("href"):"/6674847";
 var items=["Chanukah Festival!","Sunday, December 6","3:30 PM","Bakerview Park \u00b7 Mount Vernon","Free Admission \u00b7 Open to All"];
 var seq="";
 for(var i=0;i<items.length;i++){seq+='<span class="jsk-alert-item">'+items[i]+'</span><span class="jsk-alert-dot">\u2022</span>';}
 var msg=a.querySelector(".message");
-if(!msg)return;
+if(!msg)return false;
+a.setAttribute("data-jsk-slide","1");
 msg.innerHTML='<div class="jsk-alert-marquee"><div class="jsk-alert-track"><span class="jsk-alert-seq">'+seq+'</span><span class="jsk-alert-seq" aria-hidden="true">'+seq+'</span></div></div>';
 var btn=document.createElement("a");
 btn.className="jsk-alert-rsvp";
@@ -148,9 +153,21 @@ btn.href=href;
 btn.innerHTML='RSVP Free <span aria-hidden="true">\u2192</span>';
 var close=a.querySelector(".close");
 a.insertBefore(btn,close||null);
+return true;
 }catch(e){}
-});
 
+}
+function run(){
+if(formatAlert()){stop();return;}
+if(!observer&&document.documentElement){
+observer=new MutationObserver(function(){if(formatAlert())stop();});
+observer.observe(document.documentElement,{childList:true,subtree:true});
+timer=setTimeout(stop,15000);
+}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});
+else run();
+})();
 /* Chai Club page (aid 6932307): Golden Hour members section - compact counterflow tier rows built from the existing tier tables. Tracks are absolutely positioned so the email-table layout cannot stretch; bleed margin is measured at runtime because the form card is off-center on mobile. */
 document.addEventListener("DOMContentLoaded",function(){
 try{
